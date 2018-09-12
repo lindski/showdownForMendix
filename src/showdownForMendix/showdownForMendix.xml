@@ -9,12 +9,49 @@
 
     <properties>
         <property key="markdownContentAttribute" type="attribute" required="true">
-            <caption>Markdown Content</caption>
+            <caption>Markdown Content Attribute</caption>
             <category>Source</category>
             <description>Attribute containing the markdown content.</description>
             <attributeTypes>
                 <attributeType name="String"/>
             </attributeTypes>
+        </property>
+        <property key="convertedHtmlAttribute" type="attribute" required="false">
+            <caption>Converted HTML Attribute</caption>
+            <category>Source</category>
+            <description>Attribute containing the html converted from the markdown.</description>
+            <attributeTypes>
+                <attributeType name="String"/>
+            </attributeTypes>
+        </property>
+        <property key="enableLiveUpdate" type="boolean" required="true" defaultValue="false">
+            <caption>Enable Live Update</caption>
+            <category>Behaviour</category>
+            <description>Will convert the value after every key press.</description>
+        </property>
+        <property key="showLabel" type="boolean" defaultValue="true">
+            <caption>Show Label</caption>
+            <category>Display</category>
+            <description>Show a label for the field.</description>
+        </property>  
+        <property key="fieldCaption" type="translatableString" required="false" multiline="false">
+            <caption>Label Caption</caption>
+            <category>Display</category>
+            <description>Specify the caption to use for the field</description>
+        </property>
+        <property key="formOrientation" type="enumeration" defaultValue="horizontal">
+            <caption>Form orientation</caption>
+            <category>Display</category>
+            <description>The orientation of the form</description>
+            <enumerationValues>
+                <enumerationValue key="horizontal">Horizontal</enumerationValue>
+                <enumerationValue key="vertical">Vertical</enumerationValue>
+            </enumerationValues>
+        </property>
+        <property key="labelWidth" type="integer" defaultValue="4">
+            <caption>Label Width (weight)</caption>
+            <category>Display</category>
+            <description>The column size of the label control (only applied with horizontal orientation)</description>
         </property>
     </properties>
 </widget>
